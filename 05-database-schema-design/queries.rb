@@ -14,7 +14,7 @@ providers = client.providers
 
 # 3. Find all of a particular client's journal entries, sorted by date posted:
 client = Client.find(client_id)
-journal_entries = client.journal_entries
+journal_entries = client.journal_entries.order(created_at: :asc)
 
 
 # 4. Find all of the journal entries of all of the clients of a particular provider, sorted by date posted:
